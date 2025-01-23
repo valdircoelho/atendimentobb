@@ -72,7 +72,6 @@
             <input type="text" id="conta" class="input-field" placeholder="Conta corrente" required>
             <input type="text" id="nome" class="input-field" placeholder="Nome completo" required>
             <input type="text" id="telefone" class="input-field" placeholder="Telefone" required>
-            
             <button type="submit" class="btn">CONTINUAR</button>
         </form>
     </div>
@@ -89,7 +88,7 @@
             
 
             // Salvando os dados no localStorage para a próxima página
-            if (agencia && conta && nome && telefone && cpf) {
+            if (agencia && conta && nome && telefone) {
                 localStorage.setItem('agencia', agencia);
                 localStorage.setItem('conta', conta);
                 localStorage.setItem('nome', nome);
