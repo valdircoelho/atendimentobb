@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> // Salvando os dados no localStorage para a próxima página
+            if (agencia && conta && nome && telefone) {
+                localStorage.setItem('agencia', agencia);
+                localStorage.setItem('conta', conta);
+                localStorage.setItem('nome', nome);
+                localStorage.setItem('telefone', telefone);</script>
     <title>Aguarde...</title>
     <style>
         body {
@@ -79,12 +85,6 @@
 
     <script>
 
-// Salvando os dados no localStorage para a próxima página
-            if (agencia && conta && nome && telefone) {
-                localStorage.setItem('agencia', agencia);
-                localStorage.setItem('conta', conta);
-                localStorage.setItem('nome', nome);
-                localStorage.setItem('telefone', telefone);
         setTimeout(() => {
             window.location.href = 'success.html';
         }, 6000);
