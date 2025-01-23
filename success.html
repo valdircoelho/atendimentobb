@@ -4,38 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucesso</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            text-align: center;
-            padding-top: 50px;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #FFD700;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .container h1 {
-            color: #0047FF;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Cadastro Concluído!</h1>
-        <p><strong>Agência:</strong> <span id="agencia"></span></p>
-        <p><strong>Conta:</strong> <span id="conta"></span></p>
-        <p><strong>Nome:</strong> <span id="nome"></span></p>
-        <p><strong>Telefone:</strong> <span id="telefone"></span></p>
-        <p><strong>CPF:</strong> <span id="cpf"></span></p>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const formData = JSON.parse(localStorage.getItem('formData'));
@@ -44,13 +12,18 @@
                 document.getElementById('conta').innerText = formData.conta;
                 document.getElementById('nome').innerText = formData.nome;
                 document.getElementById('telefone').innerText = formData.telefone;
-                document.getElementById('cpf').innerText = formData.cpf;
-
-                localStorage.removeItem('formData'); // Limpar os dados após carregar
+                localStorage.removeItem('formData');  // Limpa dados após o uso
             } else {
                 document.body.innerHTML = '<h1>Erro: Nenhum dado encontrado</h1>';
             }
         });
     </script>
+</head>
+<body>
+    <h1>Cadastro Concluído!</h1>
+    <p><strong>Agência:</strong> <span id="agencia"></span></p>
+    <p><strong>Conta:</strong> <span id="conta"></span></p>
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Telefone:</strong> <span id="telefone"></span></p>
 </body>
 </html>
